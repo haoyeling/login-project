@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 
-use App\Http\Controllers\Login;
-Route::get('/login',[Login::class,'index']);
-Route::post('/doLogin',[Login::class,'doLogin']);
 
-use App\Http\Controllers\Register;
-Route::get('/register',[Register::class,'index']);
-Route::post('/doRegister',[Register::class,'doRegister']);
+Route::get('user/register', [UserController::class, 'register']);
+Route::post('user/create', [UserController::class, 'create']);
+Route::get('user/login', [UserController::class, 'login']);
+Route::post('user/login2', [UserController::class, 'login2']);
