@@ -65,4 +65,14 @@ class UserController extends Controller
 
         return view('info', ['url' => url('user/login'), 'message' => '登录失败，请重新登录', 'jump_time' => 3]);
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return view('info', ['url' => url('user/login'), 'message' => '注销成功', 'jump_time' => 3]);
+    }
 }

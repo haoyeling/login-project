@@ -46,7 +46,7 @@
               <label for="exampleInputPassword1">密码</label>
               <input type="password" class="form-control" name="password" value="" placeholder="password">
             </div>
-            <button type="submit" class="btn btn-primary">等&nbsp;&nbsp;录</button>
+            <button type="submit" class="btn btn-primary">登&nbsp;&nbsp;录</button>
           </form>
 
             </div>
